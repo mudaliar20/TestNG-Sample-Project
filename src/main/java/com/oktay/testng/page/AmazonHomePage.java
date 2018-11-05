@@ -17,11 +17,10 @@ public class AmazonHomePage extends BasePageUtil implements AmazonHomePage_Const
     }
 
     public AmazonLoginPage callLoginPage() {
-        takeScreenshot();
         assertThat(getTitle()).isEqualTo(txtHomePageTitle);
         clickElement(btnLoginPage);
-        takeScreenshot();
         assertThat(getTitle()).isEqualTo(txtLoginPageTitle);
+        takeScreenshot();
         return new AmazonLoginPage(driver);
     }
 

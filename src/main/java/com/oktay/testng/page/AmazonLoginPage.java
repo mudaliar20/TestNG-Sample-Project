@@ -22,6 +22,7 @@ public class AmazonLoginPage extends BasePageUtil implements AmazonLoginPage_Con
 		takeScreenshot();
 		clickElement(btnSignIn);
 		assertThat(getTitle()).isEqualTo(txtHomePageTitle);
+		takeScreenshot();
 		return new AmazonHomePage(driver);
 	}
 
