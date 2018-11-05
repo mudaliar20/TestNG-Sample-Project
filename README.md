@@ -1,3 +1,5 @@
 # TestNG-Sample-Project
 
-TestNG Parallel Test Sample
+TestNG Test Script Sample with Screenshots and Reports.
+  
+
