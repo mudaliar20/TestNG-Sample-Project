@@ -1,9 +1,11 @@
 package com.oktay.testng.base;
 
 import com.oktay.testng.constants.General_Constants;
-import org.openqa.selenium.WebDriver;
+import com.oktay.testng.util.BasePageUtil;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 /*
@@ -11,15 +13,16 @@ import org.testng.annotations.BeforeTest;
  */
 public class BaseTest implements General_Constants {
 
-	public WebDriver driver;
+    @BeforeMethod
+    public void setup() {
+        System.setProperty(DRIVER_NAME, DRIVER_PATH);
+        BasePageUtil.driver = new ChromeDriver();
+        BasePageUtil.driver.manage().window().fullscreen();
+        BasePageUtil.driver.navigate().to(URL_AMAZON);
+    }
 
-	@BeforeTest
-	public void setup() {
-		System.setProperty(DRIVER_NAME, DRIVER_PATH);
-
-		driver = new ChromeDriver();
-		driver.manage().window().fullscreen();
-		driver.navigate().to(URL_AMAZON);
-	}
-
+    @AfterMethod
+    public void tearDown(){
+        BasePageUtil.driver.quit();
+    }
 }
