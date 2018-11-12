@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Selenium TestNG Test</title>
+  <title>Test Results Report - Firefox Test Cases</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Selenium TestNG Test</h1>
+<h1>Firefox Test Cases</h1>
 <p>
-  Test duration: 26.679s
+  Test duration: 32.969s
 </p>
 
 
@@ -20,15 +20,15 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.oktay.testng.test.DemoA</td>
+        <td colspan="3" class="group">com.oktay.testng.test.LoginTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  demoATest
+                  UnsuccessfulLoginTest
       </td>
   <td class="duration">
-    3.775s
+    5.198s
   </td>
   <td class="result">
         
@@ -41,8 +41,8 @@
               org.testng.Assert.failNotEquals(Assert.java:776)<br />
               org.testng.Assert.assertTrue(Assert.java:44)<br />
               org.testng.Assert.assertTrue(Assert.java:54)<br />
-              com.oktay.testng.page.AmazonLoginPage.successfulLogin(AmazonLoginPage.java:16)<br />
-              com.oktay.testng.test.DemoA.demoATest(DemoA.java:21)<br />
+              com.oktay.testng.page.AmazonLoginPage.unsuccessfulLogin(AmazonLoginPage.java:29)<br />
+              com.oktay.testng.test.LoginTest.UnsuccessfulLoginTest(LoginTest.java:30)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -56,64 +56,13 @@
               org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
               org.testng.TestRunner.run(TestRunner.java:505)<br />
               org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
-              org.testng.TestNG.run(TestNG.java:1017)<br />
-              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)<br />
-              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
-                </div>
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  demoBTest
-      </td>
-  <td class="duration">
-    3.413s
-  </td>
-  <td class="result">
-        
-    
-        
-
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: expected [true] but found [false]</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              org.testng.Assert.fail(Assert.java:96)<br />
-              org.testng.Assert.failNotEquals(Assert.java:776)<br />
-              org.testng.Assert.assertTrue(Assert.java:44)<br />
-              org.testng.Assert.assertTrue(Assert.java:54)<br />
-              com.oktay.testng.page.AmazonLoginPage.successfulLogin(AmazonLoginPage.java:16)<br />
-              com.oktay.testng.test.DemoA.demoBTest(DemoA.java:30)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.lang.reflect.Method.invoke(Method.java:498)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:583)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
-              org.testng.TestRunner.run(TestRunner.java:505)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
-              org.testng.TestNG.run(TestNG.java:1017)<br />
-              org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)<br />
-              org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br />
+              java.lang.Thread.run(Thread.java:748)<br />
                 </div>
       </td>
 </tr>
@@ -123,15 +72,15 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.oktay.testng.test.DemoB</td>
+        <td colspan="3" class="group">com.oktay.testng.test.LoginTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  demoBTest
+                  SuccessfulLoginTest
       </td>
   <td class="duration">
-    0.000s
+    6.081s
   </td>
   <td class="result">
         

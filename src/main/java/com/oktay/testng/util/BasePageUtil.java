@@ -1,24 +1,24 @@
 package com.oktay.testng.util;
 
 import com.oktay.testng.constants.General_Constants;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
+
 
 /*
  *  Created by oktayuyar on 5.11.2018
  */
 public class BasePageUtil implements General_Constants {
 
-    public static WebDriver driver;
+    protected WebDriver driver;
+
+    public BasePageUtil(WebDriver driver) {
+        this.driver = driver;
+    }
 
 
     public String getTitle() {
@@ -91,19 +91,6 @@ public class BasePageUtil implements General_Constants {
             Thread.sleep(second * 1000);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
-        }
-    }
-
-    public void takeScreenShot(String methodName) {
-        String timeStamp;
-        File screenShotName;
-        File scrFile = ((TakesScreenshot)BasePageUtil.driver).getScreenshotAs(OutputType.FILE);
-        timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-        screenShotName = new File("src/test/resources/screenshots/" + methodName + timeStamp + ".png");
-        try {
-            FileUtils.copyFile(scrFile, screenShotName);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 

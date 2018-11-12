@@ -1,28 +1,42 @@
 package com.oktay.testng.base;
 
 import com.oktay.testng.constants.General_Constants;
-import com.oktay.testng.util.BasePageUtil;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 /*
  *  Created by oktayuyar on 5.11.2018
  */
 public class BaseTest implements General_Constants {
 
+    public WebDriver driver;
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     @BeforeMethod
-    public void setup() {
-        System.setProperty(DRIVER_NAME, DRIVER_PATH);
-        BasePageUtil.driver = new ChromeDriver();
-        BasePageUtil.driver.manage().window().fullscreen();
-        BasePageUtil.driver.navigate().to(URL_AMAZON);
+    @Parameters("browser")
+    public void setup(String browserName) {
+
+        if (browserName.equalsIgnoreCase("chrome")) {
+            System.setProperty(CHROME_DRIVER_NAME, CHROME_DRIVER_PATH);
+            driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            System.setProperty(FIREFOX_DRIVER_NAME, FIREFOX_DRIVER_PATH);
+            driver = new FirefoxDriver();
+        }
+
+        driver.manage().window().fullscreen();
+        driver.navigate().to(URL_AMAZON);
     }
 
     @AfterMethod
-    public void tearDown(){
-        BasePageUtil.driver.quit();
+    public void tearDown() {
+        driver.quit();
     }
 }
